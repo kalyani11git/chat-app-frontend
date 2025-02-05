@@ -23,7 +23,7 @@ const Register = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/register', {
+            const response = await fetch('https://chat-app-backend-1qir.onrender.com/register', {
                 method: 'POST',
                 body: formData, // No need for Content-Type, browser sets it automatically for FormData
             });

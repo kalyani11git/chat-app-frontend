@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chat-app-backend-1qir.onrender.com");
 
 const Chat = () => {
   const [users, setUsers] = useState([]);
@@ -22,7 +22,7 @@ const Chat = () => {
     const fetchUsers = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await fetch("http://localhost:5000/users", {
+        const response = await fetch("https://chat-app-backend-1qir.onrender.com/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (response.ok) {
@@ -63,7 +63,7 @@ const Chat = () => {
         const token = localStorage.getItem("token");
         try {
           const response = await fetch(
-            `http://localhost:5000/messages/${selectedUser.username}`,
+            `https://chat-app-backend-1qir.onrender.com/messages/${selectedUser.username}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           if (response.ok) {
