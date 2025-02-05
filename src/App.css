@@ -1,0 +1,10 @@
+/* You can add this to your tailwind styles or a separate file */
+body {
+  background-color: #000000;
+  font-family: 'Helvetica', sans-serif;
+}
+
+button:hover {
+  background-color: #7a66ff;
+  transform: scale(1.05);
+}

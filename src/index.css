@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* You can add this to your tailwind styles or a separate file */
+body {
+  background-color: #000000;
+  font-family: 'Helvetica', sans-serif;
+}
+
+button:hover {
+  background-color: #7a66ff;
+  transform: scale(1.05);
+}
+
+/* Hide scrollbar by default */
+.scrollable-content {
+  overflow: hidden; /* Hide scrollbar */
+}
+
+/* Show scrollbar when hovering over the container */
+.scrollable-content:hover {
+  overflow-y: scroll; /* Show scrollbar on hover */
+}
+
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+.scrollable-content::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Scroll thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Scroll thumb color on hover */
+}
+
+/* For Firefox */
+.scrollable-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Thumb color and track color */
+}
+
+.scrollable-content:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent; /* Thumb color and track color on hover */
+}
